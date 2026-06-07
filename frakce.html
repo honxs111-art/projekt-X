@@ -1,0 +1,312 @@
+  <div class="menu">
+    <a href="domů.html">💻 Home</a> 
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Frakce</title>
+    <style>
+        body {
+            background: #05060a;
+            color: #f5f5f5;
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .tabs {
+            display: inline-flex;
+            gap: 6px;
+            background: rgba(15,23,42,0.9);
+            padding: 4px;
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.25);
+            margin-bottom: 25px;
+        }
+
+        .tab {
+            font-size: 13px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            color: #9ca3af;
+            background: transparent;
+            border: none;
+            transition: 0.15s;
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #020617;
+            font-weight: 600;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 14px;
+        }
+
+        .card {
+            background: rgba(15,23,42,0.95);
+            border-radius: 14px;
+            padding: 14px;
+            border: 1px solid rgba(148,163,184,0.25);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 42px;
+            height: 42px;
+            border-radius: 999px;
+            background: #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .card-name {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .card-fullname {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .status-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+        }
+
+        .obsazeno {
+            background: rgba(22,163,74,0.15);
+            color: #bbf7d0;
+        }
+
+        .obsazeno .status-dot {
+            background: #22c55e;
+        }
+
+        .volna {
+            background: rgba(234,179,8,0.12);
+            color: #facc15;
+        }
+
+        .volna .status-dot {
+            background: #facc15;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tabs">
+        <button class="tab active" data-target="statni">Státní složky</button>
+        <button class="tab" data-target="firmy">Firmy</button>
+        <button class="tab" data-target="dilny">Dílny</button>
+    </div>
+
+    <!-- STÁTNÍ SLOŽKY -->
+    <div class="section active" id="statni">
+        <h2>Státní složky</h2>
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-top">
+                    <div class="logo"><img src="https://cdn.discordapp.com/attachments/1446950920276410370/1513062494569107456/LSPD-1.jfif?ex=6a265cc2&is=6a250b42&hm=07ad1f50ab62dc534616f2d6123477e83c1244086b27afbf9a69d6b4f16b955a&" alt="LSPD Logo" style="width: 40px; display: inline-block; vertical-align: middle;"></div>
+                    <div>
+                        <div class="card-name">LSPD</div>
+                        <div class="card-fullname">Los Santos Police Department</div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="status-pill volna">
+                        <div class="status-dot"></div> volná
+                    </div>
+                    <div>Vedoucí: —</div>
+   <span></span>
+    <a href="https://discord.com/users/" target="_blank" class="discord-link">
+        <img src="https://cdn.discordapp.com/attachments/1446950920276410370/1513134076649930834/diskord.png?ex=6a269f6c&is=6a254dec&hm=601d6ed3b7c7cd7a5093de8481aeea79afd35c5ae01f5eebfd69f5c0b6931c0e&" alt="Discord" class="discord-icon" style="width: 40px; display: inline-block; vertical-align: middle;">
+    </a>
+ </div>
+ </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <div class="logo"><img src="https://cdn.discordapp.com/attachments/1446950920276410370/1512931997868232784/LSSD.png?ex=6a25e339&is=6a2491b9&hm=ffce8c1f1e3480f56d66df40eb8977b9a454071c9c8e378fa3bd88f527764304&" alt="LSSD Logo" style="width: 40px; display: inline-block; vertical-align: middle;"></div>
+                    <div>
+                        <div class="card-name">LSSD</div>
+                        <div class="card-fullname">Los Santos Sheriff Department</div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="status-pill obsazeno">
+                        <div class="status-dot"></div> obsazeno
+                    </div>
+                    <div>Vedoucí: HanakHanak008 <div class="username">
+   <span></span>
+    <a href="https://discord.com/users/1182328715368222843" target="_blank" class="discord-link">
+        <img src="https://cdn.discordapp.com/attachments/1446950920276410370/1513134076649930834/diskord.png?ex=6a269f6c&is=6a254dec&hm=601d6ed3b7c7cd7a5093de8481aeea79afd35c5ae01f5eebfd69f5c0b6931c0e&" alt="Discord" class="discord-icon" style="width: 40px; display: inline-block; vertical-align: middle;">
+    </a>
+</div>
+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <div class="logo"><img src="https://cdn.discordapp.com/attachments/1446950920276410370/1513064785195827371/ems.png?ex=6a265ee4&is=6a250d64&hm=982f3e17d58a2bb09029bfba6e879840783b58865036e9f6b9264f6e7b5d14b2&" alt="LSSD Logo" style="width: 40px; display: inline-block; vertical-align: middle;"></div>
+                    <div>
+                        <div class="card-name">EMS</div>
+                        <div class="card-fullname">Emergency Medical Services</div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="status-pill volna">
+                        <div class="status-dot"></div> volná
+                    </div>
+                    <div>Vedoucí: —</div>
+   <span></span>
+    <a href="https://discord.com/users/" target="_blank" class="discord-link">
+        <img src="https://cdn.discordapp.com/attachments/1446950920276410370/1513134076649930834/diskord.png?ex=6a269f6c&is=6a254dec&hm=601d6ed3b7c7cd7a5093de8481aeea79afd35c5ae01f5eebfd69f5c0b6931c0e&" alt="Discord" class="discord-icon" style="width: 40px; display: inline-block; vertical-align: middle;">
+    </a>
+ </div>
+ </div>
+        
+                        <div class="card">
+                <div class="card-top">
+                    <div class="logo"><img src="https://cdn.discordapp.com/attachments/1446950920276410370/1513065618423681045/DOJ.png?ex=6a265faa&is=6a250e2a&hm=7cdd66eb36646f9588aababd8a7ae7941ae0ae9a3963aaa63940a1cea5cbb822&" alt="LSSD Logo" style="width: 40px; display: inline-block; vertical-align: middle;"></div>
+                    <div>
+                        <div class="card-name">DOJ</div>
+                        <div class="card-fullname">Department of Justice</div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="status-pill volna">
+                        <div class="status-dot"></div> volná
+                    </div>
+                    <div>Vedoucí: —</div>
+   <span></span>
+    <a href="https://discord.com/users/" target="_blank" class="discord-link">
+        <img src="https://cdn.discordapp.com/attachments/1446950920276410370/1513134076649930834/diskord.png?ex=6a269f6c&is=6a254dec&hm=601d6ed3b7c7cd7a5093de8481aeea79afd35c5ae01f5eebfd69f5c0b6931c0e&" alt="Discord" class="discord-icon" style="width: 40px; display: inline-block; vertical-align: middle;">
+    </a>
+ </div>
+ </div>
+
+        </div>
+    </div>
+
+    <!-- FIRMY -->
+    <div class="section" id="firmy">
+        <h2>Firmy</h2>
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-top">
+                    <div class="logo">UwU</div>
+                    <div>
+                        <div class="card-name">UwU Cafe</div>
+                        <div class="card-fullname">Kavárna</div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="status-pill volna">
+                         <div class="status-dot
+                        <div class="status-dot"></div> volná
+                    </div>
+                    <div>Vedoucí: —</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top">
+                    <div class="logo">BM</div>
+                    <div>
+                        <div class="card-name">Bahama Mamas</div>
+                        <div class="card-fullname">Bar</div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="status-pill volna">
+                        <div class="status-dot"></div> Volná
+                    </div>
+                    <div>Vedoucí: —</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DÍLNY -->
+    <div class="section" id="dilny">
+        <h2>Dílny</h2>
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-top">
+                    <div class="logo">LSC</div>
+                    <div>
+                        <div class="card-name">Los Santos Customs</div>
+                        <div class="card-fullname">Auto dílna</div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="status-pill volna">
+                        <div class="status-dot"></div> Volná
+                    </div>
+                    <div>Vedoucí: —</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script>
+document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active"));
+        document.getElementById(tab.dataset.target).classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>
