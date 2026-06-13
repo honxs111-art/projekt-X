@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<title>Projekt X</title>
+<title>Projekt X – Roleplay</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -10,8 +10,9 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #0f172a;
+  background: #0a0a0f;
   color: white;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -19,39 +20,50 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 60px;
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 22px 60px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
-.navbar b {
-  font-size: 26px;
-  letter-spacing: 1px;
+.nav-logo img {
+  width: 70px;
+  filter: drop-shadow(0 0 10px rgba(179,136,255,0.6));
+}
+
+.menu {
+  display: flex;
+  gap: 35px;
 }
 
 .menu a {
-  margin: 0 18px;
   color: #cbd5e1;
   text-decoration: none;
-  font-weight: 300;
-  transition: 0.2s;
+  font-size: 18px;
+  transition: 0.25s;
 }
 
 .menu a:hover {
-  color: white;
+  color: #b388ff;
 }
 
+/* HERO */
 .hero {
+  height: 100vh;
+  background: url('https://cdn.discordapp.com/attachments/1446950920276410370/1509893271495774278/mf7m7n0.jpg?ex=6a256130&is=6a240fb0&hm=7db13874414a8f7f080d3807e4f04cef56dec8797e63008af5e9153c0ddf5d74&') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 180px 20px;
-  background: url('https://cdn.discordapp.com/attachments/1446950920276410370/1509893271495774278/mf7m7n0.jpg?ex=6a256130&is=6a240fb0&hm=7db13874414a8f7f080d3807e4f04cef56dec8797e63008af5e9153c0ddf5d74&') center no-repeat;
-  background-size: 1600px; /* tady nastavíš velikost */
+  padding: 0 20px;
   position: relative;
 }
 
-
-/* Tmavý filtr pro čitelnost textu */
 .hero::before {
   content: "";
   position: absolute;
@@ -59,8 +71,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(1px);
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(2px);
 }
 
 .hero * {
@@ -69,29 +81,59 @@ body {
 }
 
 .hero h1 {
-  font-size: 65px;
+  font-size: 70px;
   font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 0 0 25px rgba(138,43,226,0.7);
 }
 
 .hero span {
-  color: #38bdf8;
+  color: #b388ff;
 }
 
 .hero p {
+  font-size: 22px;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin-top: -5px;
+}
+
+/* STATUS */
+.status {
+  margin-top: 25px;
   font-size: 20px;
-  color: #94a3b8;
-  margin-top: -10px;
+  color: #4ade80;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(74,222,128,0.7);
 }
 
 /* BUTTONY */
 .btn {
-  padding: 14px 28px;
+  padding: 16px 32px;
   margin: 12px;
   border: none;
   cursor: pointer;
   border-radius: 10px;
-  font-size: 17px;
+  font-size: 20px;
   transition: 0.25s;
+  background: #6d28d9;
+  color: white;
+  box-shadow: 0 0 20px rgba(138,43,226,0.5);
+}
+
+.btn:hover {
+  background: #7c3aed;
+  transform: translateY(-4px);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-4px);
 }
 
 .btn a {
@@ -99,15 +141,93 @@ body {
   text-decoration: none;
 }
 
-.btn-dark {
-  background: #1e293b;
-  color: white;
-  border: 1px solid #334155;
+/* PROČ SE PŘIDAT */
+.section {
+  padding: 120px 60px;
+  text-align: center;
 }
 
-.btn-dark:hover {
-  background: #334155;
-  transform: translateY(-3px);
+.section h2 {
+  font-size: 45px;
+  margin-bottom: 50px;
+  color: #b388ff;
+  text-shadow: 0 0 20px rgba(179,136,255,0.5);
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: rgba(255,255,255,0.05);
+  padding: 35px;
+  width: 320px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 20px rgba(138,43,226,0.3);
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(179,136,255,0.6);
+}
+
+.box h3 {
+  font-size: 25px;
+  color: #b388ff;
+}
+
+.box p {
+  color: #cbd5e1;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* SOCIAL */
+.social {
+  padding: 100px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-logo img {
+  width: 120px;
+  filter: drop-shadow(0 0 15px rgba(179,136,255,0.7));
+}
+
+.social-text {
+  text-align: right;
+}
+
+.social-text h3 {
+  font-size: 30px;
+  color: #b388ff;
+}
+
+.social-icons img {
+  width: 45px;
+  margin-left: 15px;
+  filter: drop-shadow(0 0 10px rgba(179,136,255,0.6));
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.social-icons img:hover {
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px;
+  color: #8b8b8b;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 </style>
 </head>
@@ -116,31 +236,77 @@ body {
 
 <!-- NAVBAR -->
 <div class="navbar">
-  <div>
-    <b> <img src="https://www.image2url.com/r2/default/files/1779898604983-3ad1d667-de8f-43e2-9a8b-c3f6e6a950e6.webp" 
-      alt="Projekt X" 
-     style="width: 80px;"></b>
+  <div class="nav-logo">
+    <img src="https://cdn.discordapp.com/attachments/1446950920276410370/1515055006477324459/projekt_x.webp?ex=6a2d9c6d&is=6a2c4aed&hm=a18beaee70c25b99c068574595ffc837a6d89b97786db2a37592e9776ef3ad83&" alt="Logo">
   </div>
 
   <div class="menu">
-    <a href="domů.html">💻 Home</a> 
-    <a href="pravidla.html">📚 Pravidla</a>
-    <a href="team.html">🎓 Staff Team</a>
-    <a href="frakce.html">🚓 frakce</a>  </div>
+    <a href="zkouška nového.html">O nás</a>
+    <a href="pravidla.html">Pravidla</a>
+    <a href="frakce.html">Frakce</a>
+    <a href="team.html">Náš tým</a>
+    <a href="novinky.html">Novinky</a>
+    <a href="#">Mapy</a>
+  </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <h1>Vítej na <span>Projekt X</span></h1>
-  <p>Začínající ER:LC roleplay server</p>
+  <p>Zakládáme si na kvalitním RolePlayi bez kompromisů. Připoj se k hráčům, využij možnosti frakcí a tvoř příběh Projektu X společně s námi.</p>
 
-  <button class="btn btn-dark">
-    <a href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County">Připojit se do hry</a>
-  </button>
+  <div class="status">
+    status: nefunguje
+  </div>
 
-  <button class="btn btn-dark">
-    <a href="https://discord.gg/2XBngSsFer">Připojit se na Discord</a>
-  </button>
+  <button class="btn"><a href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County">Připojit se do hry</a></button>
+  <button class="btn btn-secondary"><a href="https://discord.gg/2XBngSsFer">Připojit se na Discord</a></button>
+</div>
+
+<!-- PROČ SE PŘIDAT -->
+<div class="section">
+  <h2>Proč se k nám přidat?</h2>
+
+  <div class="boxes">
+    <div class="box">
+      <h3>Aktivní komunita</h3>
+      <p>Zakládáme si na přátelském prostředí a férovém přístupu. Admin tým je tu pro tebe 24/7.</p>
+    </div>
+
+    <div class="box">
+      <h3>Vlastní vývoj</h3>
+      <p>Pravidelně přinášíme unikátní funkce, které posouvají hranice RP a přidávají nové možnosti.</p>
+    </div>
+
+    <div class="box">
+      <h3>Maximální stabilita</h3>
+      <p>Díky kvalitnímu hostingu garantujeme stabilní FPS a plynulý chod bez lagů.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SOCIAL -->
+<div class="social">
+  <div class="social-logo">
+    <img src="https://cdn.discordapp.com/attachments/1446950920276410370/1515055006477324459/projekt_x.webp?ex=6a2d9c6d&is=6a2c4aed&hm=a18beaee70c25b99c068574595ffc837a6d89b97786db2a37592e9776ef3ad83&">
+  </div>
+
+  <div class="social-text">
+    <h3>Připoj se</h3>
+    <p>Najdeš nás i na sociálních sítích a Discordu.</p>
+
+    <div class="social-icons">
+      <a href="https://discord.gg/2XBngSsFer"><img src="https://cdn.discordapp.com/attachments/1446950920276410370/1513134076649930834/diskord.png?ex=6a2e886c&is=6a2d36ec&hm=7ab3b37b70783d7231717d4ad070d5c2f1c6ec59d437fe3a6d6f776531f6d5ec&">
+      <a href="https://www.tiktok.com/@projekt.x55"><img src="https://cdn.discordapp.com/attachments/1446950920276410370/1515409167349973084/TIKTOK.png?ex=6a2ee644&is=6a2d94c4&hm=e950a146db37e12c8fde38cad8e62a69097ce666b98e5e72d73ddea2351a763d&"> 
+      <img src="https://cdn.discordapp.com/attachments/1446950920276410370/1515410192127234190/youtube.png?ex=6a2ee738&is=6a2d95b8&hm=875ec021409d5e67141301c5df7ef9dd8cba739e856b9dcdd91fff2f30444c7c&">
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Projekt X. Všechna práva vyhrazena.  
+  <br> Tento projekt není spojen s Roblox Corporation.
 </div>
 
 </body>
